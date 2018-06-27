@@ -1,5 +1,5 @@
 {
-  "name": "ad",
+  "name": "@casz/ad",
   "version": "0.3.0",
   "description": "Active Directory API for Node",
   "main": "index.js",
@@ -32,5 +32,16 @@
     "jest": "^20.0.4",
     "lint-staged": "^4.0.2",
     "prettier": "^1.5.3"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/casz/ad.git"
+  },
+  "bugs": {
+    "url": "https://github.com/casz/ad/issues"
+  },
+  "homepage": "https://github.com/casz/ad#readme"
 }
