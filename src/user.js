@@ -226,8 +226,10 @@ module.exports = {
       if (cached) {
         return resolve(api.processResults(opts, [cached])[0]);
       }
-      const domain = this.config.domain;
-      userName = userName.indexOf('@') > -1 ? userName.split('@')[0] : userName;
+      let domain = this.config.domain;
+      if (userName.indexOf('@') > -1) {
+        [userName, domain] = userName.split('@')
+      }
       const filter = `(|(userPrincipalName=${userName}@${domain})(sAMAccountName=${userName}))`;
       const params = {
         filter,
